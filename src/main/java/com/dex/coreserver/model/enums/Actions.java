@@ -2,7 +2,6 @@ package com.dex.coreserver.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -10,6 +9,7 @@ public enum Actions {
 
     MENU_USER,
     MENU_ROLE,
+    MENU_FRIDGE,
 
     USER_CREATE,
     USER_UPDATE,
@@ -22,11 +22,19 @@ public enum Actions {
     ROLE_DELETE,
     ROLE_FIND_ALL,
 
+    FRIDGE_CREATE,
+    FRIDGE_UPDATE,
+    FRIDGE_DELETE,
+    FRIDGE_FIND_ALL,
+
     ;
 
     private String actionAppVersion;
-    public String getActionAppVersion(){
+
+    public String getActionAppVersion() {
         return actionAppVersion;
-    };
+    }
+
+    ;
 
 }
