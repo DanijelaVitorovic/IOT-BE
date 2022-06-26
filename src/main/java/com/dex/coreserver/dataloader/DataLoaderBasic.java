@@ -31,11 +31,11 @@ public class DataLoaderBasic {
             adminRole.setRoleName("admin");
             adminRole.setPriority(1);
             Role regularUser = new Role();
-            regularUser.setRoleName("regular-user");
+            regularUser.setRoleName("child");
             regularUser.setPriority(2);
 
             List<Actions> actions = Arrays.asList(Actions.values());
-            List<Actions> regularUserActions = Arrays.asList(Actions.MENU_USER,Actions.MENU_ROLE,Actions.USER_UPDATE);
+            List<Actions> regularUserActions = Arrays.asList(Actions.MENU_USER,Actions.MENU_ROLE,Actions.USER_UPDATE,Actions.MENU_FRIDGE);
             adminRole.setActions(actions);
             regularUser.setActions(regularUserActions);
             adminRole.setRegex( ApplicationUtils.DEFAULT_REGEX );
@@ -69,11 +69,11 @@ public class DataLoaderBasic {
 
             User regular = new User();
             regular.setActive(true);
-            regular.setFirstName("Regular");
-            regular.setLastName("Regular");
-            regular.setUsername("regular");
-            regular.setPassword(bCryptPasswordEncoder.encode("regular"));
-            regular.setEmail("regular@mail.com");
+            regular.setFirstName("Child");
+            regular.setLastName("Child");
+            regular.setUsername("child");
+            regular.setPassword(bCryptPasswordEncoder.encode("child"));
+            regular.setEmail("child@mail.com");
             regular.setCreatedAt(new Date());
             regular.setUseGoogle2f(false);
             regular.setRoles(regularRoleList);
